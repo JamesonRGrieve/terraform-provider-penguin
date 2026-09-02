@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Compiled provider binary + release artifacts
+terraform-provider-penguin
+terraform-provider-penguin.exe
+dist/
+
+# Go build/test artifacts
+*.test
+*.out
+coverage.txt
+coverage.html
+vendor/
+
+# OpenTofu / Terraform local state, plans, and dev overrides
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+dev-overrides.tfrc
+
+# Editor / OS
+.DS_Store
+*.swp
+*~

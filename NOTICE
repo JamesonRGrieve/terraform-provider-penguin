@@ -1,0 +1,19 @@
+terraform-provider-penguin
+Copyright (C) 2026 Jameson Grieve and the Penguin contributors
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version. See the LICENSE file for the full text.
+
+-------------------------------------------------------------------------------
+
+The Penguin project is a soft-fork of Pelican (https://pelican.dev), which in
+turn builds on the Pterodactyl ecosystem. This provider targets the Penguin /
+Pelican Application API and keeps compatibility with the Pterodactyl-lineage
+egg ecosystem.
+
+Provider design was informed by prior open-source Terraform providers in the
+Pterodactyl ecosystem, notably Luiggi33/terraform-provider-pterodactyl (MIT).
+No source code from those projects is incorporated into this repository; this
+notice records that their public API-client patterns were referenced.

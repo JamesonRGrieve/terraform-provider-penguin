@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# golangci-lint (v2) config for terraform-provider-penguin. The v2 default set
+# (errcheck, govet, ineffassign, staticcheck, unused) plus the correctness/quality
+# extras called for by the Go standard. Run via `make lint` (skipped cleanly when
+# golangci-lint is not installed). Findings ratchet to zero and never regress.
+version: "2"
+linters:
+  enable:
+    - bodyclose
+    - errorlint
+    - misspell
+    - nilerr
+    - noctx
+    - unconvert
+  exclusions:
+    rules:
+      - path: _test\.go
+        linters:
+          - errcheck
