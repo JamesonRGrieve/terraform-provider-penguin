@@ -19,7 +19,7 @@ which lives in the **penguin-web** repo — do not edit penguin-web from here.
 
 ## Architecture — generic first, typed sugar on top
 
-Per go.md §8, coverage is guaranteed by construction and typed resources are
+Per SOP *Stack Standards → Go* (OpenTofu provider conventions), coverage is guaranteed by construction and typed resources are
 sugar, never the only path:
 
 - **`internal/client`** — framework-free transport. Bearer auth, the Fractal
@@ -41,7 +41,7 @@ sugar, never the only path:
     `helpers.go`.
 - **`main.go`** — provider server entry. Address `registry.terraform.io/zephyrex/penguin`.
 
-### Invariants (go.md §8 / tofu.md §14)
+### Invariants (SOP *Stack Standards → Go* / *OpenTofu*: provider conventions, in-house providers)
 
 - Every stateful resource implements `ImportState` and self-heals: Read drops the
   resource from state (`RemoveResource`) on a 404 rather than erroring.
@@ -93,4 +93,4 @@ resources.
 `go test`. Mirrored in CI (`.github/workflows/ci.yml`) and the pre-commit hook
 (`.githooks/pre-commit`; enable with `make install-hooks`). `golangci-lint`
 (`make lint`) and `tfplugindocs` (`make docs`) skip cleanly when not installed.
-Never `--no-verify`. Every Go/`.tf`/script file carries the AGPL SPDX header.
+`--no-verify` only under the batch-work rule (SOP → *Git and Commits*). Every Go/`.tf`/script file carries the AGPL SPDX header.
