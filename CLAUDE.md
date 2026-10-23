@@ -6,7 +6,7 @@ its admin **Application API**. Standalone and public: no dependency on any priva
 infra. AGPL-3.0-or-later.
 
 > Read the workspace `/home/jameson/Source/CLAUDE.md`, the user tenets, and the
-> stack rules (`/home/jameson/Source/ai-prompts/go.md` §8, `.../tofu.md`) first.
+> stack rules (SOP *Stack Standards → Go* “OpenTofu provider conventions”, SOP *Stack Standards → OpenTofu*) first.
 > This file wins on repo specifics.
 
 ## Status
